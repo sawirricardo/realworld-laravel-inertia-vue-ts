@@ -1,63 +1,61 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+> ### Laravel Inertia Vue Typescript codebase containing real world examples (CRUD, auth, advanced patterns, etc) that adheres to the [RealWorld](https://github.com/gothinkster/realworld) spec and API.
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+### [Demo](https://github.com/sawirricardo/realworld-laravel-inertia-vue-ts)&nbsp;&nbsp;&nbsp;&nbsp;[Github](https://realworld-laravel-inertiavuets.herokuapp.com/)
 
-## About Laravel
+> (Thanks to [Conwnet](https://github.com/conwnet/github1s))
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+This codebase was created to demonstrate a fully fledged fullstack application built with **Laravel Inertia Vue Typescript** including CRUD operations, authentication, routing, pagination, and more.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+We've gone to great lengths to adhere to the **Laravel Inertia Vue Typescript** community styleguides & best practices.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+For more information on how to this works with other frontends/backends, head over to the [RealWorld](https://github.com/gothinkster/realworld) repo.
 
-## Learning Laravel
+## Project Overview
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+"Conduit" is a social blogging site (i.e. a Medium.com clone). It uses a custom API for all requests, including authentication. You can view a live demo over at https://realworld-laravel-inertia-vue.herokuapp.com
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+**General functionality:**
 
-## Laravel Sponsors
+-   Authenticate users via JWT (login/signup pages + logout button on settings page)
+-   CRU\* users (sign up & settings page - no deleting required)
+-   CRUD Articles
+-   CR\*D Comments on articles (no updating required)
+-   GET and display paginated lists of articles
+-   Favorite articles
+-   Follow other users
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+### Routing Guidelines
 
-### Premium Partners
+-   Home page (URL: / )
+    -   List of tags
+    -   List of articles pulled from either Feed, Global, or by Tag
+    -   Pagination for list of articles
+-   Sign in/Sign up pages (URL: /login, /register )
+-   Settings page (URL: /settings )
+-   Editor page to create/edit articles (URL: /editor, /editor/article-slug-here )
+-   Article page (URL: /article/article-slug-here )
+    -   Delete article button (only shown to article's author)
+    -   Render markdown from server client side
+    -   Comments section at bottom of page
+    -   Delete comment button (only shown to comment's author)
+-   Profile page (URL: /profile/:username, /profile/:username/favorites )
+    -   Show basic user info
+    -   List of articles populated from author's created articles or author's favorited articles
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+# How it works
 
-## Contributing
+You can also access the back-end to the /api route.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+# Installation
 
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```
+1. git clone https://github.com/sawirricardo/realworld-laravel-inertia-vue.git
+2. cd realworld-laravel-inertia-vue
+3. composer install
+4. npm install
+5. npm run watch
+6. php artisan serve (or use Laravel Valet)
+```
 
 ## License
 
